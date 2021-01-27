@@ -1,6 +1,9 @@
 <?php
-namespace NeutronStars\TravelAgency;
+namespace NeutronStars\ImmobilierAgency;
 
+/*
+ * Cette class me permet de créer des formulaires.
+ */
 class FormBuilder
 {
     private string $html;

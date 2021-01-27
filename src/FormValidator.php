@@ -1,10 +1,13 @@
 <?php
 
-namespace NeutronStars\TravelAgency;
+namespace NeutronStars\ImmobilierAgency;
 
 
 use voku\helper\AntiXSS;
 
+/*
+ * Cette class me permet de valider des données soumis par l'utilisateur.
+ */
 class FormValidator
 {
     const REQUIRE_AREA   = 'Ce champs est requis !';
@@ -145,7 +148,7 @@ class FormValidator
 
     private function selectValid(array $input, $key, array $value): void
     {
-        $this->selectLimit($value['value'] ?? [], getValueByArray($input, $key), $key, $value['require'] ?? true);
+        $this->selectLimit($value['values'] ?? [], getValueByArray($input, $key), $key, $value['require'] ?? true);
     }
 
     private function selectLimit(array $values, $value, $key, bool $require = true): void
@@ -155,7 +158,7 @@ class FormValidator
                 $this->errors[$key] = self::REQUIRE_AREA;
             }
         }elseif (empty($values[$value])){
-            $this->errors[$key] = NOT_VALID_AREA;
+            $this->errors[$key] = self::NOT_VALID_AREA;
         }
     }
 

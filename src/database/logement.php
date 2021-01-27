@@ -1,6 +1,14 @@
 <?php
+/*
+ * Ce fichier me permet de traiter tous ce qui est attrait à la table logement de ma base de donnée.
+ *
+ * J'importe la class Database.
+ */
 use NeutronStars\Database\Database;
 
+/*
+ * Permet de récupérer tous les logements stockés dans la base de données avec une limite déterminé par la variable $items.
+ */
 function getLogements(Database $database, int $offset, int $items): array
 {
     return $database->query('logement l')
@@ -10,6 +18,9 @@ function getLogements(Database $database, int $offset, int $items): array
         ->getResults();
 }
 
+/*
+ * Permet de récupérer le nombre de logement stockés dans la base de donnée.
+ */
 function getCount(Database $database): int
 {
     return intval($database->query('logement')
@@ -17,6 +28,9 @@ function getCount(Database $database): int
         ->getResult()['count']);
 }
 
+/*
+ * Permet de créer un nouveau logement dans la base de donnée.
+ */
 function createLogement(Database $database, array $array): void
 {
     $database->query('logement')
@@ -36,7 +50,9 @@ function createLogement(Database $database, array $array): void
         ])->execute();
 }
 
-
+/*
+ * Permet de mettre à joueur l'image d'un logement dans la base de donnée.
+ */
 function setImageLogement(Database $database, int $id, ?string $path): void
 {
     $database->query('logement')

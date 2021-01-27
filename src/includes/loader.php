@@ -1,4 +1,7 @@
 <?php
+/*
+ * Dans ce fichier je charge toutes mes dépendances et ressources que j'ai besoin par défaut.
+ */
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
