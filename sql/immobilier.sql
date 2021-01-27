@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3307
--- Généré le : mer. 27 jan. 2021 à 11:50
+-- Généré le : mer. 27 jan. 2021 à 14:29
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `logement` (
   `created_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_TYPE` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=441 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=443 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `logement`
@@ -486,7 +486,9 @@ INSERT INTO `logement` (`id`, `title`, `address`, `city`, `postal_code`, `surfac
 (437, 'Suspendisse', 'Maecenas aliquam scelerisque erat', 'Praesent pretium', '32112', 623, 915495, 'assets/uploads/images/logement_437.jpg', 2, 'Maecenas et ultrices metus. Etiam a leo ipsum. Nulla vestibulum pellentesque faucibus. Sed faucibus varius ante, et congue lacus efficitur vel. Proin viverra, mauris ut suscipit sodales, elit libero lacinia magna, vel bibendum ante lacus a enim. Vivamus ut justo blandit, consectetur magna sit amet, volutpat orci. Sed ultrices consectetur magna et mattis. Sed id nisi vel tellus iaculis ornare quis sed orci. Praesent maximus venenatis lorem, sed gravida arcu luctus vel. Integer at maximus odio. Sed sed tortor lectus.', '2021-01-27 12:15:25'),
 (438, 'Maecenas aliquam', 'Sed tempor magna in condimentum', 'Praesent ullamcorper', '509', 804, 1801884, 'assets/uploads/images/logement_438.jpg', 2, 'Sed pellentesque condimentum vulputate. Suspendisse in magna et enim pretium interdum. Nulla vulputate purus ex, ut gravida neque molestie sed. Donec venenatis nisi vel orci facilisis varius. Sed molestie tempor turpis quis elementum. Suspendisse potenti. Cras semper tortor tellus, vitae commodo massa rhoncus et. Praesent ac efficitur eros. Ut vitae pulvinar turpis, ac elementum tellus. Curabitur feugiat, velit ut maximus sagittis, libero ante rhoncus justo, tristique lacinia arcu eros non turpis. Nam eget feugiat felis, convallis cursus lacus. Phasellus feugiat purus nec eros vehicula, at feugiat libero ornare. Vivamus scelerisque, nibh et porta viverra, elit metus sodales tortor, sit amet elementum diam mi ut ante.', '2021-01-27 12:15:25'),
 (439, 'Curabitur', 'Donec luctus eu erat eu pellentesque', 'Quisque condimentum', '75392', 448, 572251, 'assets/uploads/images/logement_439.jpg', 1, 'Vestibulum vitae nisi eu ligula scelerisque venenatis. Vivamus pretium id erat at lobortis. Etiam eget ex lorem. Aliquam nulla est, consequat quis sodales vitae, tincidunt a mi. Ut ut magna pellentesque ligula efficitur vulputate sodales at massa. Curabitur vitae neque a enim gravida pulvinar. Nam eget semper ex.', '2021-01-27 12:15:25'),
-(440, 'Phasellus rhoncus', 'Ut porttitor faucibus vulputate', 'Curabitur', '37925', 160, 1174364, 'assets/uploads/images/logement_440.jpg', 2, 'Sed pellentesque condimentum vulputate. Suspendisse in magna et enim pretium interdum. Nulla vulputate purus ex, ut gravida neque molestie sed. Donec venenatis nisi vel orci facilisis varius. Sed molestie tempor turpis quis elementum. Suspendisse potenti. Cras semper tortor tellus, vitae commodo massa rhoncus et. Praesent ac efficitur eros. Ut vitae pulvinar turpis, ac elementum tellus. Curabitur feugiat, velit ut maximus sagittis, libero ante rhoncus justo, tristique lacinia arcu eros non turpis. Nam eget feugiat felis, convallis cursus lacus. Phasellus feugiat purus nec eros vehicula, at feugiat libero ornare. Vivamus scelerisque, nibh et porta viverra, elit metus sodales tortor, sit amet elementum diam mi ut ante.', '2021-01-27 12:15:25');
+(440, 'Phasellus rhoncus', 'Ut porttitor faucibus vulputate', 'Curabitur', '37925', 160, 1174364, 'assets/uploads/images/logement_440.jpg', 2, 'Sed pellentesque condimentum vulputate. Suspendisse in magna et enim pretium interdum. Nulla vulputate purus ex, ut gravida neque molestie sed. Donec venenatis nisi vel orci facilisis varius. Sed molestie tempor turpis quis elementum. Suspendisse potenti. Cras semper tortor tellus, vitae commodo massa rhoncus et. Praesent ac efficitur eros. Ut vitae pulvinar turpis, ac elementum tellus. Curabitur feugiat, velit ut maximus sagittis, libero ante rhoncus justo, tristique lacinia arcu eros non turpis. Nam eget feugiat felis, convallis cursus lacus. Phasellus feugiat purus nec eros vehicula, at feugiat libero ornare. Vivamus scelerisque, nibh et porta viverra, elit metus sodales tortor, sit amet elementum diam mi ut ante.', '2021-01-27 12:15:25'),
+(441, 'Lorem Ipsum Dolor', 'Lorem Ipsum Dolor Sit Amet', 'Dolor Sit', '00900', 568, 356, NULL, 1, NULL, '2021-01-27 15:23:58'),
+(442, 'Test Test', 'Test Test', 'Test Test', '00100', 52, 632, NULL, 1, NULL, '2021-01-27 15:26:09');
 
 -- --------------------------------------------------------
 
