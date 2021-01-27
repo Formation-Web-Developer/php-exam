@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --color-one: #4f4f4f;
+    --color-two: #D6D6D6;
+    --color-text: #FCFCFC;
+    --color-extra: #F0F0F0;
+    --color-border: #707070;
+}
+
+*:before, *, *:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, select, textarea{
+    font: 400 16px/1.3 'Roboto', sans-serif;
+}
+
+body{
+    background-color: var(--color-one);
+    color: var(--color-text);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    text-decoration: none;
+    background-image: linear-gradient(#5bcd5b, #47a247);
+    display: inline-block;
+    margin: auto;
+    color: white;
+}
+
+header{
+    background-image: url('../img/header.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 5rem black;
+}
+
+.container, .container-2{
+    width: 100%;
+    margin: auto;
+    padding: .7rem;
+}
+
+.container a{
+    margin: 1rem 0;
+}
+
+div.success{
+    color: white;
+    background-color: #3fab3f;
+    border-radius: .7rem;
+    margin: .7rem auto;
+}
+
+.logements{
+    display: flex;
+    flex-direction: column;
+}
+
+.logement, .logement .header, .logement .misc .info{
+    display: flex;
+    align-items: center;
+}
+
+.logement{
+    align-items: center;
+    padding: .3rem;
+}
+
+.logement .misc .info{
+    justify-content: space-between;
+}
+
+.logement .picture{
+    display: none;
+    position: relative;
+}
+
+.logement .logement-type{
+    background-color: #3fab3f;
+    color: white;
+}
+
+.logement .header h2{
+    font-size: 1.7rem;
+}
+
+.logement .header .logement-type{
+    font-size: .7rem;
+    padding: .3rem;
+    border-radius: .7rem;
+    margin-left: .7rem;
+}
+
+.logement .picture .logement-type{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+}
+
+.logement .misc{
+    width: 100%;
+    padding: .7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logement .misc .address{
+    color: var(--color-two);
+    margin: .5rem 0;
+}
+
+.logement span{
+    font-weight: 500;
+    color: #3fab3f;
+}
+
+
+form{
+    width: 100%;
+    margin: auto;
+}
+
+form .form-group{
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 0;
+}
+
+form .form-group .form-error{
+    color: #e86363;
+    font-size: .9rem;
+    font-style: italic;
+    margin-bottom: .3rem;
+}
+
+.form-group .form-error ~ input,
+.form-group .form-error ~ select,
+.form-group .form-error ~ textarea{
+    border: 2px solid #e86363;
+}
+
+form .form-group label{
+    margin-bottom: .3rem;
+}
+
+form .form-group input, form .form-group textarea, form .form-group select{
+    padding: .3rem;
+    outline: none;
+}
+
+div.success{
+    background-color: #3fab3f;
+    color: white;
+    padding: .7rem;
+    border-radius: .5rem;
+}
+
+@media (min-width: 568px) {
+    .container, .container-2{
+        max-width: 540px;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .logement .picture{
+        display: block;
+    }
+    .logement .header .logement-type{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width: 720px;
+    }
+    .container-2{
+        max-width: 80%;
+    }
+}
+
+.pagination-separator{
+    margin: 1rem 0;
+}
+
+@media (min-width: 992px) {
+    .container{
+        max-width: 960px;
+    }
+    .logements{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .logement{
+        flex-direction: column;
+        width: 33.333333%;
+    }
+    .container-2{
+        max-width: 50%;
+    }
+}

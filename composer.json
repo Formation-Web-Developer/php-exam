@@ -1,0 +1,26 @@
+{
+    "name": "neutronstars/travel-agency",
+    "description": "Exercice d'agence de voyage",
+    "type": "project",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "NeutronStars",
+            "email": "pro@neutronstars.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">= 7.4",
+        "neutronstars/database-sql": "^1.0",
+        "voku/anti-xss": "^4.1",
+        "gregwar/image": "^2.0",
+        "ext-fileinfo": "*",
+        "neutronstars/pagination": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeutronStars\\TravelAgency\\": "src/"
+        }
+    }
+}
