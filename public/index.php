@@ -66,7 +66,7 @@ include_once '../src/includes/header.php';
              * Je boucle tous mes logements stockés dans ma base de donnée en fonction de la page ou se trouve l'utilisateur
              * et du nombre de logement par page.
              */
-            foreach (getLogements($database, $page, $itemPerPage) as $logement): ?>
+            foreach (getLogements($database, $page-1, $itemPerPage) as $logement): ?>
                 <div class="logement">
                     <div class="picture">
 

@@ -7,7 +7,8 @@
 use NeutronStars\Database\Database;
 
 /*
- * Permet de récupérer tous les logements stockés dans la base de données avec une limite déterminé par la variable $items.
+ * Permet de récupérer tous les logements stockés dans la base de données
+ * avec une limite déterminé par la variable $items ainsi que triés du plus récent au plus ancien.
  */
 function getLogements(Database $database, int $offset, int $items): array
 {
@@ -15,6 +16,7 @@ function getLogements(Database $database, int $offset, int $items): array
         ->select('l.*, t.name AS logement_type')
         ->leftJoin('logement_type t', 't.id=l.type')
         ->limit($items, $offset)
+        ->orderBy('l.created_at', \NeutronStars\Database\Query::ORDER_BY_DESC)
         ->getResults();
 }
 
